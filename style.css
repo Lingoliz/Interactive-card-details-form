@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    display: flex;
+    
+}
+.left-side{
+    width: 35%;
+    position: relative;
+    background: url('/images/bg-main-desktop.png') no-repeat center;
+    background-size: cover;
+}
+
+.right-side {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.completed {
+    max-width: 400px;
+
+    padding-left: 4rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.7rem;
+
+}
+.completed img {
+    width: 70px;
+    margin-bottom: 1rem;
+}
+.completed h1 {
+    color: hsl(278, 68%, 11%);
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+ .completed p {
+    font-weight: 500;
+    color: hsl(279, 6%, 55%);
+ }
+ .completed a {
+    color: white;
+    text-decoration: none;
+    background: hsl(278, 68%, 11%);
+    align-self: stretch;
+    padding: 0.5rem ;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 4rem;
+    gap: 1rem;
+    max-width: 400px;
+}
+form > div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form span {
+    font-weight: 500;
+    color: hsl(278, 68%, 11%);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+}
+form input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    outline: none;
+    color: hsl(278, 68%, 11%);
+    font-size: 1.07rem;
+    font-weight: 500;
+}
+
+
+::placeholder {
+    font-weight: 500;
+    color: hsl(270, 3%, 87%);
+    font-size: 1.06rem;
+}
+.exp-cvc {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+}
+.exp div {
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
+}
+
+.exp-cvc span {
+    display: inline-block;
+}
+
+form > input {
+    background: hsl(278, 68%, 11%);
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 0.98rem;
+}
+
+input:focus {
+    border-color:hsl(278, 94%, 30%);
+}
+
+.card-front {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    width: 100%;
+    max-width: 420px;
+    right: -6rem ;
+    z-index: 50;
+}
+.card-back {
+    position: absolute;
+    top: calc(50% + 2rem);
+    right: -10rem;
+    width: 100%;
+    max-width: 420px;
+}
+.card-front ,
+.card-back {
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+}
+
+.card-front >img ,
+.card-back > img {
+    display: block;
+    width: 100%;
+}
+.card-front .info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+.card-front .info img {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 100px;
+}
+.card-front .info div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+}
+.card-front h1 {
+    color: white;
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+.card-front h2 {
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.card-front .exp-date {
+    color: white;
+    font-weight: 400;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.card-back .info {
+    position: absolute;
+    z-index: 100;
+   
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    right: 3rem;
+    color: white;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+span.error {
+    color: hsl(0, 100%, 66%);
+    font-size: 0.7rem;
+    margin: 0.1rem 0 0 0 ;
+    text-transform: lowercase;
+    letter-spacing: 0;
+}
+
+
+@media (max-width:950px) {
+    main {
+        flex-direction: column;
+        overflow: hidden;
+    }
+    main .left-side {
+        height: 30vh;
+        width: 100%;
+        padding: 1rem;
+    }
+    main .card-front {
+    top: 9rem;
+    left: 50%;
+    transform:translateX(-50%) ;
+    -webkit-transform:translateX(-50%) ;
+    -moz-transform:translateX(-50%) ;
+    -ms-transform:translateX(-50%) ;
+    -o-transform:translateX(-50%) ;
+} 
+
+
+    main .card-back {
+    top: 1rem;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    left: calc(50% + 3rem);
+}
+    main .right-side {
+       min-height: 100vh; 
+       
+       
+       
+       width: 100%;
+       padding:1rem;
+       
+    }
+    
+    form {
+        padding-left: 0;
+    }
+    .completed {
+        padding-left: 0;
+    }
+}
